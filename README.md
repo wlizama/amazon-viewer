@@ -1,14 +1,16 @@
-# Java Training
+# Amazon Viewer
 
-Ejercicios varios para conocer el lenguaje de programación **Java**
+Proyecto para conocer el lenguaje de programación **Java**
 
-## Compilar
+## Apuntes
+
+**compilar**
 
 ```sh
   javac miArchivoJava.javac # Esto genera un miArchivoJava.class
 ```
 
-## Ejecutar
+**ejecutar**
 
 ```sh
   java miArchivoJava # sin extensión
