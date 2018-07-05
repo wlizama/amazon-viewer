@@ -1,13 +1,14 @@
 package com.wilder.amazonviewer.model;
 
-public class Chapter {
+public class Chapter extends Movie{
 	private int id;
-	private String title;
-	private int duration;
-	private short year;
-	private boolean viewed;
-	private int timeViewed;
-	private int seasonNumber;
+	private int sessionNumber;
+	
+	public Chapter(String title, String genre, String creator, int duration, short year, int sessionNumber) {
+		super(title, genre, creator, duration, year);
+		this.setsessionNumber(sessionNumber);
+	}
+	
 	
 	public int getId() {
 		return id;
@@ -15,42 +16,20 @@ public class Chapter {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getTitle() {
-		return title;
+	
+	public int getsessionNumber() {
+		return sessionNumber;
 	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public int getDuration() {
-		return duration;
-	}
-	public void setDuration(int duration) {
-		this.duration = duration;
-	}
-	public short getYear() {
-		return year;
-	}
-	public void setYear(short year) {
-		this.year = year;
-	}
-	public boolean isViewed() {
-		return viewed;
-	}
-	public void setViewed(boolean viewed) {
-		this.viewed = viewed;
-	}
-	public int getTimeViewed() {
-		return timeViewed;
-	}
-	public void setTimeViewed(int timeViewed) {
-		this.timeViewed = timeViewed;
-	}
-	public int getSeasonNumber() {
-		return seasonNumber;
-	}
-	public void setSeasonNumber(int seasonNumber) {
-		this.seasonNumber = seasonNumber;
+	public void setsessionNumber(int sessionNumber) {
+		this.sessionNumber = sessionNumber;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return  "\n :: CHAPTER ::" + 
+			"\n Title: " + getTitle() +
+			"\n Year: " + getYear() + 
+			"\n Creator: " + getCreator() +
+			"\n Duration: " + getDuration();
+	}
 }

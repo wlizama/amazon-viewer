@@ -12,6 +12,18 @@ public class Book {
 	private boolean readed;
 	private int timeReaded;
 	
+	public Book(String title, Date editionDate, String editorial, String[] authors, String isbn, boolean readed,
+			int timeReaded) {
+		super();
+
+		this.title = title;
+		this.editionDate = editionDate;
+		this.editorial = editorial;
+		this.authors = authors;
+		this.isbn = isbn;
+		this.readed = readed;
+		this.timeReaded = timeReaded;
+	}
 	public int getId() {
 		return id;
 	}
