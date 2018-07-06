@@ -1,13 +1,16 @@
 package com.wilder.amazonviewer.model;
 
+import java.util.ArrayList;
+
 public class Serie extends Film{
 	private int id;
-	private int timeViewed;
 	private int sessionQuantity;
-	private Chapter[] chapter;
+	private ArrayList<Chapter> chapters;
 	
+
 	public Serie(String title, String genre, String creator, int duration, int sessionQuantity) {
 		super(title, genre, creator, duration);
+		// TODO Auto-generated constructor stub
 		this.sessionQuantity = sessionQuantity;
 	}
 
@@ -15,32 +18,20 @@ public class Serie extends Film{
 		return id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public int getTimeViewed() {
-		return timeViewed;
-	}
-
-	public void setTimeViewed(int timeViewed) {
-		this.timeViewed = timeViewed;
-	}
-
-	public int getsessionQuantity() {
+	public int getSessionQuantity() {
 		return sessionQuantity;
 	}
 
-	public void setsessionQuantity(int sessionQuantity) {
+	public void setSessionQuantity(int sessionQuantity) {
 		this.sessionQuantity = sessionQuantity;
 	}
 
-	public Chapter[] getChapter() {
-		return chapter;
+	public ArrayList<Chapter> getChapters() {
+		return chapters;
 	}
 
-	public void setChapter(Chapter[] chapter) {
-		this.chapter = chapter;
+	public void setChapters(ArrayList<Chapter> chapters) {
+		this.chapters = chapters;
 	}
 	
 	@Override
