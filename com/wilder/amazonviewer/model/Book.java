@@ -2,76 +2,65 @@ package com.wilder.amazonviewer.model;
 
 import java.util.Date;
 
-public class Book {
+public class Book extends Publication{
 	private int id;
-	private String title;
-	private Date editionDate;
-	private String editorial;
-	private String[] authors;
 	private String isbn;
 	private boolean readed;
 	private int timeReaded;
 	
-	public Book(String title, Date editionDate, String editorial, String[] authors, String isbn, boolean readed,
-			int timeReaded) {
-		super();
-
-		this.title = title;
-		this.editionDate = editionDate;
-		this.editorial = editorial;
-		this.authors = authors;
-		this.isbn = isbn;
-		this.readed = readed;
-		this.timeReaded = timeReaded;
+	
+	public Book(String title, Date edititionDate, String editorial, String[] authors) {
+		super(title, edititionDate, editorial);
+		// TODO Auto-generated constructor stub
+		setAuthors(authors);
 	}
+
+
 	public int getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public Date getEditionDate() {
-		return editionDate;
-	}
-	public void setEditionDate(Date editionDate) {
-		this.editionDate = editionDate;
-	}
-	public String getEditorial() {
-		return editorial;
-	}
-	public void setEditorial(String editorial) {
-		this.editorial = editorial;
-	}
-	public String[] getAuthors() {
-		return authors;
-	}
-	public void setAuthors(String[] authors) {
-		this.authors = authors;
-	}
+
+
 	public String getIsbn() {
 		return isbn;
 	}
+
+
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
+
+
 	public boolean isReaded() {
 		return readed;
 	}
+
+
 	public void setReaded(boolean readed) {
 		this.readed = readed;
 	}
+
+
 	public int getTimeReaded() {
 		return timeReaded;
 	}
+
+
 	public void setTimeReaded(int timeReaded) {
 		this.timeReaded = timeReaded;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		String detailBook = "\n :: BOOK ::" + 
+							"\n Title: " + getTitle() +
+							"\n Editorial: " + getEditorial() + 
+							"\n Edition Date: " + getEdititionDate() +
+							"\n Authors: ";
+		for (int i = 0; i < getAuthors().length; i++) {
+			detailBook += "\t" + getAuthors()[i];
+		}
+		return  detailBook;
+	}
 }
