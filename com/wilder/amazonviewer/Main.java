@@ -2,6 +2,7 @@ package com.wilder.amazonviewer;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 import com.wilder.amazonviewer.model.Movie;
 
@@ -29,7 +30,8 @@ public class Main {
 			System.out.println("6. Report Today");
 			System.out.println("0. Exit");
 			
-			int respuesta = 1; // temporal
+			Scanner sc = new Scanner(System.in);
+			int respuesta = Integer.valueOf(sc.nextLine());
 			
 			switch (respuesta) {
 				case 0:
@@ -64,7 +66,7 @@ public class Main {
 	}
 	
 	public static void showMovies() {
-		int exit = 0;
+		int exit = 1;
 		ArrayList<Movie> movies = Movie.makeMoviesList();
 		do {
 			System.out.println();
@@ -78,6 +80,25 @@ public class Main {
 			System.out.println("0. Regresar al Menu");
 			System.out.println();
 			
+			Scanner sc = new Scanner(System.in);
+			int response = Integer.valueOf(sc.nextLine());
+			
+			if(response == 0)
+				showMenu();
+			
+			Movie movieSelected = movies.get(response-1);
+			movieSelected.setViewed(true);
+			Date dateIni = movieSelected.startToSee(new Date());
+
+			int fullMovie = 10000;
+			for (int i = 0; i < fullMovie; i++) {
+				System.out.println((((i+1)*100)/fullMovie) + "%");
+			}
+			
+			movieSelected.stopToSee(dateIni, new Date());
+			System.out.println();
+			System.out.println("Viste:\n" + movieSelected);
+			System.out.println("por: " + movieSelected.getTimeViewed() + " milisegundos");
 		}while(exit !=0);
 		
 	}
