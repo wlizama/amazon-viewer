@@ -1,12 +1,13 @@
 package com.wilder.amazonviewer.model;
-
 import java.util.Date;
 
 public class Publication {
+	
 	private String title;
 	private Date edititionDate;
 	private String editorial;
 	private String[] authors;
+	
 	
 	public Publication(String title, Date edititionDate, String editorial) {
 		super();

@@ -1,12 +1,15 @@
 package com.wilder.amazonviewer.model;
 
 public class Film {
+	
 	private String title;
 	private String genre;
 	private String creator;
 	private int duration;
 	private short year;
 	private boolean viewed;
+	
+	
 	
 	public Film(String title, String genre, String creator, int duration) {
 		super();
@@ -47,12 +50,21 @@ public class Film {
 		this.year = year;
 	}
 	public String isViewed() {
-		String visto = viewed ? "SI" : "NO";
+		String visto = "";
+		if(viewed == true) {
+			visto = "Sí";
+		}else {
+			visto = "No";
+		}
+		
 		return visto;
+	}
+	
+	public boolean getIsViewed() {
+		return viewed;
 	}
 	public void setViewed(boolean viewed) {
 		this.viewed = viewed;
-	}
-	
-	
+	}	
+
 }
