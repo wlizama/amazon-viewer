@@ -14,11 +14,24 @@ import com.wilder.amazonviewer.model.Serie;
 import com.wilder.makereport.Report;
 import com.wilder.amazonviewer.util.AmazonUtil;
 
+/**
+ * <h1>AmazonViewer</h1>
+ * AmazonViewer es un programa que permite visualizar Peliculas, Series con sus resectivos Capitulos,
+ * Libros y Revistas. Te permite generara reportes generales y con la fecha del día
+ * <p>
+ * Existen algunas reglas como que los elementos pueden ser visualizados o leidos a excepcion de las 
+ * revistas, estas solo pueden ser leidas a modo de exposición sin ser leidas. 
+ * 
+ * @author wilder
+ * @version 1.0.0
+ * @since 2018
+ **/
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		showMenu();
+		
 	}
 	
 	public static void showMenu() {

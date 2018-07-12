@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"com.wilder.amazonviewer"},{"l":"com.wilder.amazonviewer.model"},{"l":"com.wilder.amazonviewer.util"}]

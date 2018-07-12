@@ -1,5 +1,18 @@
 package com.wilder.amazonviewer.model;
 
+/**
+ * <h1>Film</h1>
+ * Film es una clase padre abstracta
+ * <p>
+ * Esta clase es la clase base de la familia Films, como es abstracta 
+ * no pueden crearse instancias. Continene el método abstracto 
+ * {@code view()} que es obligatorio implementar para todo aquél que pertenezca a la familia.
+ * 
+ * 
+ * @author wilder
+ * @version 1.0.0
+ * @since 2018
+ * */
 public abstract class Film {
 	
 	private String title;
@@ -66,7 +79,10 @@ public abstract class Film {
 	public void setViewed(boolean viewed) {
 		this.viewed = viewed;
 	}	
-
+	
+	/**
+	 * {@code view()} es un método abstracto obligatorio de implementar
+	 * */
 	public abstract void view();
 	
 }
